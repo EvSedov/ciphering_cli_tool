@@ -1,4 +1,4 @@
-const config = {inputPath: '', outputPath: ''};
+const config = {inputPath: '', outputPath: '', cipherSecuence: ''};
 
 process.argv.forEach((arg, idx) => {
   if (arg === '-i' || arg === '--input') {
@@ -9,7 +9,7 @@ process.argv.forEach((arg, idx) => {
     config.outputPath = process.argv[idx + 1];
   }
   if (arg === '-c' || arg === '--config') {
-    config.ciphers = process.argv[idx + 1]
+    config.cipherSecuence = process.argv[idx + 1]
   }
   console.log({ arg, idx });
 });
